@@ -2,8 +2,8 @@
 
 class Defcont extends CI_Controller {
     public function index() {
-        $this->covidmodel->insert_dati_regioni();
-        $this->covidmodel->insert_dati_province();
+        //$this->covidmodel->insert_dati_regioni();
+        //$this->covidmodel->insert_dati_province();
 
         $date = new DateTime($this->covidmodel->get_dataora());
         $formattedDate = $date->format('d/m/Y');
