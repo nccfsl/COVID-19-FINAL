@@ -44,8 +44,8 @@
 
                 if ($ob->denominazione_regione == "P.A. Bolzano") {
                     $ob->denominazione_regione = "Trentino Alto Adige";
-                    $trentino_array1 = array($ob->codice_regione, $ob->denominazione_regione, $ob->lat, $ob->long);
-                    $trentino_array2 = array($ob->codice_regione, $formattedDate, $ricoverati, $terapiaint, $isolamento, $vartotpos, $guariti, $deceduti, $tamponi);
+                    $trentino_array1 = array(04, $ob->denominazione_regione, $ob->lat, $ob->long);
+                    $trentino_array2 = array(04, $formattedDate, $ricoverati, $terapiaint, $isolamento, $vartotpos, $guariti, $deceduti, $tamponi);
                 
                     $index++;
                     continue;
