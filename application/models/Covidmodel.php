@@ -1,7 +1,7 @@
 <?php
     class Covidmodel extends CI_Model
     {
-        public function insert_dati_regioni() { // inserisce i dati delle regioni nel database covid_19
+        public function insert_dati_regioni(DateTime $lastdata) { // inserisce i dati delle regioni nel database covid_19
             $this->db->db_debug = FALSE;
             $sql1 = "INSERT INTO Regioni (codReg, nome, latitudine, longitudine) VALUES (?, ?, ?, ?);";
             $sql2 = "INSERT INTO Datiregioni (codReg, data, ricoverati, terapia_intensiva, isolamento_domiciliare, nuovi_att_pos, guariti, deceduti, tamponi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
@@ -20,6 +20,10 @@
             $index = 0;
             foreach ($obj as $ob) {
                 $date = new DateTime($ob->data);
+
+                if ($lastdata == null || strtotime($lastdata) > strtotime($date)) {
+                    continue;
+                }
 
                 if ($index < 21) {
                     $ricoverati = $ob->ricoverati_con_sintomi;
@@ -74,7 +78,7 @@
             }
         }
 
-        public function insert_dati_province() { // inserisce tutti i dati delle province nel database covid_19
+        public function insert_dati_province(DateTime $lastdata) { // inserisce tutti i dati delle province nel database covid_19
             $this->db->db_debug = FALSE;
             $sql1 = "INSERT INTO Province (codProv, codReg, nome, sigla, latitudine, longitudine) VALUES (?, ?, ?, ?, ?, ?);";
             $sql2 = "INSERT INTO Datiprovince (codProv, data, totale_casi) VALUES (?, ?, ?);";
@@ -97,6 +101,10 @@
             foreach ($obj as $ob) {
                 $date = new DateTime($ob->data);
 
+                if ($lastdata == null || strtotime($lastdata) > strtotime($date)) {
+                    continue;
+                }
+
                 if ($index < 107) {
                     $totcasi = $ob->totale_casi;
                 }
@@ -111,6 +119,11 @@
                 
                 $index++;
             }
+        }
+
+        public function update_data() {
+            $this->covidmodel->insert_dati_regioni($this->covidmodel->get_dataora());
+            $this->covidmodel->insert_dati_province($this->covidmodel->get_dataora());
         }
 
         public function get_regioni() {
