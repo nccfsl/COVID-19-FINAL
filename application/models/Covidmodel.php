@@ -21,7 +21,7 @@
             foreach ($obj as $ob) {
                 $date = new DateTime($ob->data);
 
-                if ($lastdata == null || strtotime($lastdata) > strtotime($date)) {
+                if ($lastdata == null || strtotime($lastdata->format('d-m-Y')) > strtotime($date->format('d-m-Y'))) {
                     continue;
                 }
 
@@ -101,7 +101,7 @@
             foreach ($obj as $ob) {
                 $date = new DateTime($ob->data);
 
-                if ($lastdata == null || strtotime($lastdata) > strtotime($date)) {
+                if ($lastdata == null || strtotime($lastdata->format('d-m-Y')) > strtotime($date)->format('d-m-Y')) {
                     continue;
                 }
 
