@@ -122,8 +122,8 @@
         }
 
         public function update_data() {
-            $this->covidmodel->insert_dati_regioni(date('d/m/Y', strtotime($this->covidmodel->get_dataora())));
-            $this->covidmodel->insert_dati_province(date('d/m/Y', strtotime($this->covidmodel->get_dataora())));
+            $this->covidmodel->insert_dati_regioni(new DateTime($this->covidmodel->get_dataora()));
+            $this->covidmodel->insert_dati_province(new DateTime($this->covidmodel->get_dataora()));
         }
 
         public function get_regioni() {
