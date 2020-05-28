@@ -21,7 +21,7 @@
             foreach ($obj as $ob) {
                 $date = new DateTime($ob->data);
 
-                if ($lastdata == null || strtotime($lastdata) > strtotime($ob->data)) {
+                if ($lastdata == null || $lastdata > $date) {
                     continue;
                 }
 
@@ -101,7 +101,7 @@
             foreach ($obj as $ob) {
                 $date = new DateTime($ob->data);
 
-                if ($lastdata == null || strtotime($lastdata) > strtotime($ob->data)) {
+                if ($lastdata == null || $lastdata > $date) {
                     continue;
                 }
 
@@ -122,8 +122,8 @@
         }
 
         public function update_data() {
-            $this->covidmodel->insert_dati_regioni($this->covidmodel->get_dataora());
-            $this->covidmodel->insert_dati_province($this->covidmodel->get_dataora());
+            $this->covidmodel->insert_dati_regioni(new DateTime($this->covidmodel->get_dataora()));
+            $this->covidmodel->insert_dati_province(new DateTime($this->covidmodel->get_dataora()));
         }
 
         public function get_regioni() {
