@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Dati COVID-19 - Italia</title>
+        <title>INFO COVID - Italia</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
         <link rel="icon" href="<?=base_url()?>/favicon.ico" type="image/icon">
@@ -9,7 +9,7 @@
     <body>
         <navbar>
             <div class="siimple-navbar siimple-navbar--large siimple-navbar--light animated slideInDown">
-                <a href="<?php echo site_url('defcont/index'); ?>" class="siimple-navbar-title">Dati COVID-19</a>
+                <a href="<?php echo site_url('defcont/index'); ?>" class="siimple-navbar-title">INFO COVID</a>
                 <div class="siimple-navbar-subtitle">Dati italiani sul COVID-19</div>
             </div>
         </navbar>
