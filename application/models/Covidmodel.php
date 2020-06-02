@@ -22,6 +22,7 @@
                 $date = new DateTime($ob->data);
 
                 if ($lastdata == null || $lastdata > $date) {
+                    $index++;
                     continue;
                 }
 
