@@ -125,7 +125,7 @@
 
         public function update_data() {
             $this->covidmodel->insert_dati_regioni(new DateTime($this->covidmodel->get_dataora()));
-            $this->covidmodel->insert_dati_province(new DateTime($this->covidmodel->get_dataora()));
+            $this->covidmodel->insert_dati_province(new DateTime($this->covidmodel->get_dataora_prov()));
         }
 
         public function get_regioni() {
@@ -247,6 +247,15 @@
             $obj = json_decode($json); */
 
             $json = $this->db->query("select max(data) as data from datiregioni;");
+            $obj = $json->result();
+
+            $latest = end($obj);
+
+            return $latest->data;
+        }
+
+        public function get_dataora_prov() {
+            $json = $this->db->query("select max(data) as data from datiprovince;");
             $obj = $json->result();
 
             $latest = end($obj);
