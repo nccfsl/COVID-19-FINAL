@@ -10,15 +10,15 @@
         <navbar>
             <div class="siimple-navbar siimple-navbar--large siimple-navbar--light animated slideInDown">
                 <a href="<?php echo site_url('defcont/index'); ?>" class="siimple-navbar-title">INFO COVID</a>
-                <div class="siimple-navbar-subtitle">Dati italiani sul COVID-19</div>
+                <div class="siimple-navbar-subtitle">Tecnologia al servizio della salute</div>
             </div>
         </navbar>
         <main>
             <div class="siimple-content theme-content siimple-content--large">
                 <div class="siimple-box">
-                    <div class="siimple-box-title">COVID-19</div>
-                    <div class="siimple-box-subtitle">Dati italiani sulla diffusione del Coronavirus</div>
-                    <div class="siimple-box-detail">Scopri l'andamento nazionale, i dati per regione o i dati per provincia</div>
+                    <div class="siimple-box-title">INFO COVID</div>
+                    <div class="siimple-box-subtitle">Tecnologia al servizio della salute</div>
+                    <div class="siimple-box-detail">Dati italiani sulla diffusione del Coronavirus</div>
                 </div>
                 <div class="siimple-grid animated zoomIn">
                     <div class="siimple-grid-row">

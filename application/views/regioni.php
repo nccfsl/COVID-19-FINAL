@@ -117,7 +117,7 @@
         <navbar>
             <div class="siimple-navbar siimple-navbar--large siimple-navbar--light animated slideInDown">
                 <a href="<?php echo site_url('defcont/index'); ?>" class="siimple-navbar-title">INFO COVID</a>
-                <div class="siimple-navbar-subtitle">Dati italiani sul COVID-19</div>
+                <div class="siimple-navbar-subtitle">Tecnologia al servizio della salute</div>
                 <div class="siimple--float-right">
                     <a href="<?php echo site_url('defcont/andamento'); ?>" class="siimple-navbar-item">Andamento nazionale</a>
                     <a href="<?php echo site_url('defcont/regioni'); ?>" class="siimple-navbar-item">Regioni</a>
