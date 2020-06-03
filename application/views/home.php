@@ -18,7 +18,7 @@
                 <div class="siimple-box">
                     <div class="siimple-box-title">INFO COVID</div>
                     <div class="siimple-box-subtitle">Tecnologia al servizio della salute</div>
-                    <div class="siimple-box-detail">Dati italiani sulla diffusione del Coronavirus</div>
+                    <div class="siimple-box-detail">Dati italiani sulla diffusione del COVID-19</div>
                 </div>
                 <div class="siimple-grid animated zoomIn">
                     <div class="siimple-grid-row">
